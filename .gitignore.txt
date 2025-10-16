@@ -1,0 +1,7 @@
+code/myjson.json
+files/.
+Dockerfile.txt
+docker-compose.yaml
+testfile.txt
+code/.ipynb_checkpoints/data_explorer-checkpoint.ipynb
+code/.ipynb_checkpoints/data_collector-checkpoint.ipynb
