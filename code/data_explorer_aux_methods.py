@@ -3,14 +3,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-def time_frame_plot_etfs(df_etfs, eu_stock_symbols, suptitle):
+def time_frame_plot_etfs(df_etfs, eu_stock_symbols, suptitle_part):
     time_frames = ['year_month', 'month'] 
     titles = ['Year/month', 'Month']
     nticks = {'year_month': 15}
     step = 1
     # Plot F.T. European ETF opening prices
     fig, axes = plt.subplots(nrows=1, ncols=2, figsize=[15,6])
-    fig.suptitle(t='European F.T. ETFs\' opening prices', fontsize=12)
+    fig.suptitle(t=f'{suptitle_part} F.T. ETFs\' opening prices', fontsize=12)
     for ax_index, time_frame in enumerate(time_frames):
         # df open mean
         df_om = df_etfs[df_etfs['stock_symbol'].isin(eu_stock_symbols)].copy(deep=True)
